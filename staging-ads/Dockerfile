@@ -60,4 +60,4 @@ COPY config/supervisord.conf /etc/supervisor/conf.d/laravel.conf
 EXPOSE 80
 
 # Start services
-CMD ["/bin/sh", "-c", "service nginx start && service php8.1-fpm start && service supervisor start && supervisord -c /etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/bin/sh", "-c", "service nginx start && service php8.1-fpm start && service supervisor start && /etc/init.d/supervisor start"]
